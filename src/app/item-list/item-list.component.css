@@ -1,0 +1,11 @@
+:host{
+  display:block;
+  margin-top: 1rem;
+}
+.noPost{
+  text-align: center;
+}
+mat-label{
+  font-size: 10px;
+  color: darkgray;
+}

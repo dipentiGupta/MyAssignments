@@ -1,0 +1,18 @@
+<mat-accordion *ngIf="items.length > 0">
+  <mat-expansion-panel *ngFor="let item of items">
+    <mat-expansion-panel-header>
+      {{item.name}}
+    </mat-expansion-panel-header>
+
+    <mat-label>Description :</mat-label>
+    <p>{{item.description}}</p>
+
+    <mat-label>Price :</mat-label>
+    <p>{{item.price + " rs"}}</p>
+    <mat-action-row>
+      <a mat-button color="primary" [routerLink] = "['/edititem',item.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(item.id)">Delete</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="noPost mat-body-1" *ngIf="items.length<=0">No posts Added yet!</p>
